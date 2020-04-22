@@ -41,5 +41,8 @@ const mandarinData = {
 
   // document.querySelector("#language-container").innerHTML = h1(mandarinData.name, "mandarin-heading")
 
-
-
+  // document.querySelector("#mandarin").addEventListener("click", function(){
+  //   htmlGenerator(mandarinData)}
+  document.querySelector("#mandarin").addEventListener("click", function(){
+    htmlGenerator(mandarinData);
+})

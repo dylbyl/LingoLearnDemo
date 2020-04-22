@@ -54,6 +54,9 @@ const funFacts = (funFactsObject, funFactsClass) =>{
     for(let j=0; j<chineseDialectsArray.length;i++){
         funFactsString += `<li>${$chineseDialectsArray[j]}</li>`
     }}
+    funFactsString +=`</ul>`
     return funFactsString;
 }
+
+
 
