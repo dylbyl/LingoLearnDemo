@@ -19,3 +19,17 @@
     padding: 1em;
     list-style-type: none;
 }
+
+#field-translate{
+    margin-bottom: 40px;
+    margin-top: 4px;
+}
+
+#input-translate{
+    margin: 20px;
+}
+
+.translate-btn{
+    margin: 20px;
+    margin-bottom: 100px;
+}

@@ -102,9 +102,11 @@ const htmlGenerator = (language) => {
             <form action="">
                 <input type="text" name="translate" id="input-translate">
             </form>
-            <button id="translate-btn-${language.name}">Translate</button>
+            <button class="translate-btn" id="translate-btn-${language.name}">Translate</button>
         </div>
-      <div id="field-translate"></div> 
+        <div class="col">
+            <div id="field-translate"><h2>Translation: </h2></div> 
+        </div>
     </div>`
 }
 
@@ -150,11 +152,11 @@ document.querySelector("#language-container").addEventListener("click", function
 
         //If the input string is not a key in the lagnuage's .dictionary, an error message is printed
         if((translatePhrase == "") || (language[`dictionary`][`${translatePhrase}`] === undefined)){
-            document.querySelector("#field-translate").innerHTML = "Sorry! Please input a valid phrase!";
+            document.querySelector("#field-translate").innerHTML = "<h2>Sorry! </h2>Please input a valid phrase!";
         }
         //If the input string matches with a key in the dictionary, the corresponding value is printed
         else if(language[`dictionary`][`${translatePhrase}`] != undefined){
-            document.querySelector("#field-translate").innerHTML = language[`dictionary`][`${translatePhrase}`];
+            document.querySelector("#field-translate").innerHTML = "<h2>Translation: </h2>" + language[`dictionary`][`${translatePhrase}`];
         }
     }
 
