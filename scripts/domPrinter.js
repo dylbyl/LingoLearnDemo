@@ -48,7 +48,19 @@ const htmlGenerator = (language) => {
 document.querySelector("#language-container").addEventListener("click", function(){
     if (event.target.id.split("-")[0] == "translate") {
         const originalPhrase = document.querySelector("#input-translate").value;
-        const translatePhrase = originalPhrase.toLowerCase();
+        const lowerCasePhrase = originalPhrase.toLowerCase();
+        let translateSplit = lowerCasePhrase.split(" ");
+        let translatePhrase = "";
+        for (let i = 0; i < translateSplit.length; i++){
+            if (i >= 1){
+                console.log(translateSplit[i]);
+                translatePhrase += translateSplit[i].charAt(0).toUpperCase() + translateSplit[i].slice(1)
+                console.log(translatePhrase);
+            }
+            else{
+            translatePhrase += translateSplit[i];
+            }
+        }
         let language = {};
         if(event.target.id.split("-")[2] == "French"){
             language = frenchData;
