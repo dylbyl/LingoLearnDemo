@@ -41,7 +41,7 @@ const htmlGenerator = (language) => {
     container.innerHTML += '</div><div class="row">'
     container.innerHTML += '</div>'
     // Calls the function to print countriesSpoken of the language
-    container.innerHTML += countrySpoken(language.countrySpoken, `${language.name}-countrySpoken`)
+    container.innerHTML += countrySpoken(language.countriesSpoken, `${language.name}-countrySpoken`)
 }
 
 // -------------------- For reference! -----------------//
