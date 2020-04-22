@@ -25,3 +25,35 @@ const h1 = (text, classNames) => {
 // }
 
 // const h1 = (text, classNames) => `<h1 class="${classNames}">${text}</h1>`
+
+const funFacts = (funFactsObject, funFactsClass) =>{
+    let funFactsString = `
+    <ul class="${funFactsClass}">
+    <h1>Fun Facts:<h1>
+    `;
+    
+    //Returns related Languages
+    funFactsString += `<h3>Related Languages</h3>`
+    let funFactsLanguagesArray = funFactsObject.relatedLanguages
+    for (let i=0; i< funFactsLanguagesArray.length; i++){
+        funFactsString += `<li>${funFactsLanguagesArray[i]}</li>`    
+    }
+
+    //Add next lettersinalphabet and number of speakers to li's
+
+    funFactsString += `<h3>Letters in Alphabet: ${funFactsObject.lettersInAlphabet}</h3>`
+    funFactsString += `<h3>Number of Speakers: ${funFactsObject.numberOfSpeakers}</h3>`
+    
+    //Add additional info if exists
+    
+    if (funFactsObject.name == "Mandarin"){
+    funFactsString += `<h3>Dialect Info:</h3>`
+    funFactsString += `<p>${funFactsObject.mandarinInfo.dialectInfo}</p>`
+    funFactsString += `<h3>Chinese Dialects: `
+    let chineseDialectsArray = funFactsObject.mandarinInfo.chineseDialects
+    for(let j=0; j<chineseDialectsArray.length;i++){
+        funFactsString += `<li>${$chineseDialectsArray[j]}</li>`
+    }}
+    return funFactsString;
+}
+

@@ -39,6 +39,7 @@ const mandarinData = {
     }
   }
 
+  // document.querySelector("#language-container").innerHTML = h1(mandarinData.name, "mandarin-heading")
 
 
 
