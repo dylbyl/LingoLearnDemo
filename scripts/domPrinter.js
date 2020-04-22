@@ -38,6 +38,7 @@ const htmlGenerator = (language) => {
     container.innerHTML += '</div><div class="row">'
     //Calls the function to print notable speakers of the language
     container.innerHTML += notable(language.notablePeople, `${language.name}-notable`)
+    container.innerHTML += countrySpoken(language.countriesSpoken, `${language.name}-countrySpoken`)
     container.innerHTML += '</div><div class="row">'
     container.innerHTML += `<div class="col"><form action="">
         <input type="text" name="translate" id="input-translate">
@@ -46,7 +47,6 @@ const htmlGenerator = (language) => {
       <div id="field-translate"></div>`
     container.innerHTML += '</div>'
     // Calls the function to print countriesSpoken of the language
-    container.innerHTML += countrySpoken(language.countriesSpoken, `${language.name}-countrySpoken`)
 }
 
 document.querySelector("#language-container").addEventListener("click", function(){
