@@ -4,6 +4,8 @@ const h1 = (text, classNames) => {
     return `<h1 class="${classNames}">${text}</h1>`
 }
 
+
+// Go to french.js to see how we can execute this function
 //Generates and returns an HTML string of the notable speakers of a language
 //Accepts an array of notable speakers and the desired class name
 const notable = (notableArray, notableClass) => {
@@ -38,6 +40,8 @@ const htmlGenerator = (language) => {
     container.innerHTML += notable(language.notablePeople, `${language.name}-notable`)
     container.innerHTML += '</div><div class="row">'
     container.innerHTML += '</div>'
+    // Calls the function to print countriesSpoken of the language
+    container.innerHTML += countrySpoken(language.countriesSpoken, `${language.name}-countrySpoken`)
 }
 
 // -------------------- For reference! -----------------//
@@ -53,3 +57,15 @@ const htmlGenerator = (language) => {
 // }
 
 // const h1 = (text, classNames) => `<h1 class="${classNames}">${text}</h1>`
+
+
+const countrySpoken = (countryArray, countryClass) =>{
+    let countryString = `
+    <ul class ="${countryClass}">
+    <h1>Countries Spoken:</h1>`;
+    for(let i=0; i < countryArray.length; i++){
+        countryString+= `<li>${countryArray[i]}</li>`
+    }
+    countryString += '</ul>';
+    return countryString;
+}
