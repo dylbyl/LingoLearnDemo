@@ -19,8 +19,8 @@ const mandarinData = {
       relatedLanguages: ["Korean", "Japanese"],
       lettersInAlphabet: 50000,
       numberOfSpeakers: "about 900 million",
-      mandrinInfo: {
-        dialectInfo: "Mandrin is one of many different Chinese dialects. It is mainly spoken in North and Southeast China",
+      mandarinInfo: {
+        dialectInfo: "Mandarin is one of many different Chinese dialects. It is mainly spoken in North and Southeast China",
         chineseDialects: ["Mandarin", "Wu", "Gan", "Xiang", "Hakka", "Yue", "Min"]
       }
     },
@@ -39,6 +39,10 @@ const mandarinData = {
     }
   }
 
+  // document.querySelector("#language-container").innerHTML = h1(mandarinData.name, "mandarin-heading")
 
-
-
+  // document.querySelector("#mandarin").addEventListener("click", function(){
+  //   htmlGenerator(mandarinData)}
+  document.querySelector("#mandarin").addEventListener("click", function(){
+    htmlGenerator(mandarinData);
+})
