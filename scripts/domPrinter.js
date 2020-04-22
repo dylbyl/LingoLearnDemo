@@ -9,6 +9,7 @@ const h1 = (text, classNames) => {
     return `<h1 class="${classNames}">${text}</h1>`
 }
 
+
 // Go to french.js to see how we can execute this function
 
 
@@ -25,3 +26,15 @@ const h1 = (text, classNames) => {
 // }
 
 // const h1 = (text, classNames) => `<h1 class="${classNames}">${text}</h1>`
+
+
+const countrySpoken = (countryArray, countryClass) =>{
+    let countryString = `
+    <ul class ="${countryClass}">
+    <h1>Countries Spoken:</h1>`;
+    for(let i=0; i < countryArray.length; i++){
+        countryString+= `<li>${countryArray[i]}</li>`
+    }
+    countryString += '</ul>';
+    return countryString;
+}
