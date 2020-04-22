@@ -37,8 +37,37 @@ const htmlGenerator = (language) => {
     //Calls the function to print notable speakers of the language
     container.innerHTML += notable(language.notablePeople, `${language.name}-notable`)
     container.innerHTML += '</div><div class="row">'
+    container.innerHTML += `<div class="col"><form action="">
+        <input type="text" name="translate" id="input-translate">
+      </form>
+      <button id="translate-btn-${language.name}">Translate</button></div>
+      <div id="field-translate"></div>`
     container.innerHTML += '</div>'
 }
+
+document.querySelector("#language-container").addEventListener("click", function(){
+    if (event.target.id.split("-")[0] == "translate") {
+        const originalPhrase = document.querySelector("#input-translate").value;
+        const translatePhrase = originalPhrase.toLowerCase();
+        let language = {};
+        if(event.target.id.split("-")[2] == "French"){
+            language = frenchData;
+        }
+        if(event.target.id.split("-")[2] == "Mandarin"){
+            language = mandarinData;
+        }
+        if(event.target.id.split("-")[2] == "Spanish"){
+            language = spanishData;
+        }
+        if((translatePhrase == "") || (language[`dictionary`][`${translatePhrase}`] === undefined)){
+            document.querySelector("#field-translate").innerHTML = "Sorry! Please input a valid phrase!";
+        }
+        else if(language[`dictionary`][`${translatePhrase}`] != undefined){
+            document.querySelector("#field-translate").innerHTML = language[`dictionary`][`${translatePhrase}`];
+        }
+    }
+
+})
 
 // -------------------- For reference! -----------------//
 
