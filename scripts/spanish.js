@@ -48,6 +48,5 @@ const spanishData = {
   };
 
   document.querySelector("#spanish").addEventListener("click", function(){
-    htmlGenerator(spanishData)
-  })
-
+    htmlGenerator(spanishData);
+})

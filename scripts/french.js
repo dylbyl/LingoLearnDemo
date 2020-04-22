@@ -53,7 +53,3 @@ const frenchData = {
 document.querySelector("#french").addEventListener("click", function(){
     htmlGenerator(frenchData);
 })
-
-
-
-

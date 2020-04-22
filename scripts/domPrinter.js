@@ -25,6 +25,44 @@ const notable = (notableArray, notableClass) => {
     return notableString;
 }
 
+
+//Generates and returns an HTML string of the FunFacts object of the language
+//Accepts funfacts object and desired class name
+const funFacts = (funFactsObject, funFactsClass) =>{
+    let funFactsString = `
+    <ul class="${funFactsClass}">
+    <h2>Fun Facts:<h2>
+    `;
+    
+    //Returns related Languages
+    funFactsString += `<h4>Related Languages:</h4>`
+    let funFactsLanguagesArray = funFactsObject.relatedLanguages
+    for (let i=0; i< funFactsLanguagesArray.length; i++){
+        funFactsString += `<li>${funFactsLanguagesArray[i]}</li>`    
+    }
+
+    //Add next lettersinalphabet and number of speakers to li's
+
+    funFactsString += `<h4>Letters in Alphabet:</h4> <p>${funFactsObject.lettersInAlphabet}</p>`
+    funFactsString += `<h4>Number of Speakers:</h4> <p>${funFactsObject.numberOfSpeakers}</p>`
+    
+    //Add additional info if exists
+    const additionalInfo = funFactsObject.mandarinInfo
+    if (additionalInfo != undefined){
+     funFactsString += `<h4>Dialect Info:</h4>`
+     funFactsString += `<p>${funFactsObject.mandarinInfo.dialectInfo}</p>`
+     funFactsString += `<h4>Chinese Dialects:</h4>`
+    let chineseDialectsArray = additionalInfo.chineseDialects
+    funFactsString += `<ul>`
+    for(let j=0; j < chineseDialectsArray.length;j++){
+          funFactsString += `<li>${chineseDialectsArray[j]}</li>`
+        }
+    funFactsString +=`</ul>`
+}
+    funFactsString +=`</ul>`;
+    return funFactsString;
+}
+
 //Generates a block of HTML for the desired language, adding it to the #language-container inner HTML
 //Accepts a language object, then calls the other domPrinter functions based on the object's properties
 const htmlGenerator = (language) => {
@@ -38,6 +76,7 @@ const htmlGenerator = (language) => {
     container.innerHTML += '</div><div class="row">'
     //Calls the function to print notable speakers of the language
     container.innerHTML += notable(language.notablePeople, `${language.name}-notable`)
+    container.innerHTML += funFacts(language.funFacts, `${language.name}--funfacts`)
     container.innerHTML += '</div><div class="row">'
     container.innerHTML += '</div>'
     // Calls the function to print countriesSpoken of the language
@@ -57,6 +96,9 @@ const htmlGenerator = (language) => {
 // }
 
 // const h1 = (text, classNames) => `<h1 class="${classNames}">${text}</h1>`
+
+
+
 
 
 const countrySpoken = (countryArray, countryClass) =>{

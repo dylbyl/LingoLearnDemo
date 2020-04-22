@@ -8,3 +8,14 @@
     padding: 1em;
     list-style-type: none;
 }
+
+.Mandarin-heading{
+    margin: 20px;
+}
+
+.Mandarin-notable{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
