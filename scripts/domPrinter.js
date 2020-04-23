@@ -156,10 +156,17 @@ document.querySelector("#language-container").addEventListener("click", function
         //If the input string is not a key in the lagnuage's .dictionary, an error message is printed
         if((translatePhrase == "") || (language[`dictionary`][`${translatePhrase}`] === undefined)){
             document.querySelector("#field-translate").innerHTML = "<h2>Sorry! </h2>Please input a valid phrase!";
+            speechSynthesis.speak(new SpeechSynthesisUtterance('So sorry!'));
         }
         //If the input string matches with a key in the dictionary, the corresponding value is printed
         else if(language[`dictionary`][`${translatePhrase}`] != undefined){
             document.querySelector("#field-translate").innerHTML = "<h2>Translation: </h2>" + language[`dictionary`][`${translatePhrase}`];
+            if(language == mandarinData){
+                speechSynthesis.speak(new SpeechSynthesisUtterance("I don't even know where to start with this"));
+            }
+            else{
+                speechSynthesis.speak(new SpeechSynthesisUtterance(language[`dictionary`][`${translatePhrase}`]));
+            }
         }
     }
 
