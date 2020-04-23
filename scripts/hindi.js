@@ -1,6 +1,6 @@
 
   const hindiData = {
-    name: "Hindi  ",
+    name: "Hindi",
     notablePeople: [
       "Nelly Furtado",
       "John Cena",
@@ -57,3 +57,7 @@
     }
     }
   };
+
+  document.querySelector("#hindi").addEventListener("click", function(){
+    htmlGenerator(hindiData);
+})

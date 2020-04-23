@@ -48,6 +48,31 @@
     list-style-type: none;
 }
 
+.Hindi-heading{
+    margin: 20px;
+}
+
+.Hindi-notable{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Hindi-funfacts{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Hindi-countrySpoken{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
 .Spanish-heading{
     margin: 20px;
 }
