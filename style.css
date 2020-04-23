@@ -34,6 +34,28 @@
     list-style-type: none;
 }
 
+#field-translate{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    padding: 1em;
+    height:22.5vh;
+}
+
+#input-translate{
+    margin: 20px;
+}
+
+.input-container{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+
+.translate-btn{
+    margin: 20px;
+}
+
 .Mandarin-funfacts{
     border: 1px solid gainsboro;
     border-radius: 8px;
