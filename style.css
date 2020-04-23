@@ -1,23 +1,40 @@
+body{
+    background-color: #183A37;
+    color: #04151F;
+}
+
+h1{
+    color: #EB6C10;
+}
+
+h2{
+    color: #432534;
+}
+
+h4{
+    color: #EB6C10;
+}
+
 .French-heading{
     margin: 20px;
 }
 
 .French-notable{
-    border: 1px solid gainsboro;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
+    background-color: #EFD6AC;
 }
 
 .French-funfacts{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
 }
 
 .French-countrySpoken{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
@@ -28,43 +45,46 @@
 }
 
 .Mandarin-notable{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
 }
 
 #field-translate{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
     border-radius: 8px;
     margin-bottom: 40px;
     padding: 1em;
-    height:22.5vh;
+    height:17.5vh;
+}
+
+
+.input-container{
+    background-color: #EFD6AC;
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 100px;
+    margin-left: 1em;
 }
 
 #input-translate{
-    margin: 20px;
-}
-
-.input-container{
-    border: 1px solid gainsboro;
-    border-radius: 8px;
-    margin-bottom: 100px;
+    margin-left: 20px;
 }
 
 .translate-btn{
-    margin: 20px;
+    margin-left: 20px;
 }
 
 .Mandarin-funfacts{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
 }
 
 .Mandarin-countrySpoken{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
@@ -75,21 +95,46 @@
 }
 
 .Spanish-notable{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
 }
 
 .Spanish-funfacts{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
 }
 
 .Spanish-countrySpoken{
-    border: 1px solid gainsboro;
+    background-color: #EFD6AC;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Hindi-heading{
+    margin: 20px;
+}
+
+.Hindi-notable{
+    background-color: #EFD6AC;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Hindi-funfacts{
+    background-color: #EFD6AC;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Hindi-countrySpoken{
+    background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
