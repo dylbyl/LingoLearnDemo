@@ -76,7 +76,7 @@ const htmlGenerator = (language) => {
     container.innerHTML += '</div><div class="row">'
     //Calls the function to print notable speakers of the language
     container.innerHTML += notable(language.notablePeople, `${language.name}-notable`)
-    container.innerHTML += funFacts(language.funFacts, `${language.name}--funfacts`)
+    container.innerHTML += funFacts(language.funFacts, `${language.name}-funfacts`)
     container.innerHTML += '</div><div class="row">'
     container.innerHTML += '</div>'
     // Calls the function to print countriesSpoken of the language

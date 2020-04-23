@@ -9,11 +9,64 @@
     list-style-type: none;
 }
 
+.French-funfacts{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.French-countrySpoken{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
 .Mandarin-heading{
     margin: 20px;
 }
 
 .Mandarin-notable{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Mandarin-funfacts{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Mandarin-countrySpoken{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Spanish-heading{
+    margin: 20px;
+}
+
+.Spanish-notable{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Spanish-funfacts{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Spanish-countrySpoken{
     border: 1px solid gainsboro;
     border-radius: 8px;
     padding: 1em;
