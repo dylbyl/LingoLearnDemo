@@ -27,39 +27,47 @@ const notable = (notableArray, notableClass) => {
 //Generates and returns an HTML string of the FunFacts object of the language
 //Accepts funfacts object and desired class name
 const funFacts = (funFactsObject, funFactsClass) => {
-  let funFactsString = `
+    let funFactsString = `
     <ul class="${funFactsClass}">
     <h2>Fun Facts:<h2>
     `;
 
-  //Returns related Languages
-  funFactsString += `<h4>Related Languages:</h4>`;
-  let funFactsLanguagesArray = funFactsObject.relatedLanguages;
-  for (let i = 0; i < funFactsLanguagesArray.length; i++) {
-    funFactsString += `<li>${funFactsLanguagesArray[i]}</li>`;
-  }
+    //Returns related Languages
+    funFactsString += `<h4>Related Languages:</h4>`
+    const checkForHindi = funFactsObject.relatedLanguages
+    const isArray = Array.isArray(checkForHindi)
+    if (isArray == false) {
+        funFactsString += `<p>${checkForHindi}</p>`
+    } else {
+        let funFactsLanguagesArray = funFactsObject.relatedLanguages
+        for (let i = 0; i < funFactsLanguagesArray.length; i++) {
+            funFactsString += `<li>${funFactsLanguagesArray[i]}</li>`
+        }
+    }
 
-  //Add next lettersinalphabet and number of speakers to li's
 
-  funFactsString += `<h4>Letters in Alphabet:</h4> <p>${funFactsObject.lettersInAlphabet}</p>`;
-  funFactsString += `<h4>Number of Speakers:</h4> <p>${funFactsObject.numberOfSpeakers}</p>`;
+    //Add next lettersinalphabet and number of speakers to li's
 
-  //Add additional info if exists
-  const additionalInfo = funFactsObject.mandarinInfo;
-  if (additionalInfo != undefined) {
-    funFactsString += `<h4>Dialect Info:</h4>`;
-    funFactsString += `<p>${funFactsObject.mandarinInfo.dialectInfo}</p>`;
-    funFactsString += `<h4>Chinese Dialects:</h4>`;
-    let chineseDialectsArray = additionalInfo.chineseDialects;
-    funFactsString += `<ul>`;
-    for (let j = 0; j < chineseDialectsArray.length; j++) {
-      funFactsString += `<li>${chineseDialectsArray[j]}</li>`;
+    funFactsString += `<h4>Letters in Alphabet:</h4> <p>${funFactsObject.lettersInAlphabet}</p>`
+    funFactsString += `<h4>Number of Speakers:</h4> <p>${funFactsObject.numberOfSpeakers}</p>`
+
+    //Add additional info if exists
+    const additionalInfo = funFactsObject.mandarinInfo
+    if (additionalInfo != undefined) {
+        funFactsString += `<h4>Dialect Info:</h4>`
+        funFactsString += `<p>${funFactsObject.mandarinInfo.dialectInfo}</p>`
+        funFactsString += `<h4>Chinese Dialects:</h4>`
+        let chineseDialectsArray = additionalInfo.chineseDialects
+        funFactsString += `<ul>`
+        for (let j = 0; j < chineseDialectsArray.length; j++) {
+            funFactsString += `<li>${chineseDialectsArray[j]}</li>`
+        }
+        funFactsString += `</ul>`
     }
     funFactsString += `</ul>`;
-  }
-  funFactsString += `</ul>`;
-  return funFactsString;
-};
+    return funFactsString;
+}
+
 
 const countrySpoken = (countryArray, countryClass) => {
   let countryString = `
