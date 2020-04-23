@@ -66,7 +66,7 @@ const funFacts = (funFactsObject, funFactsClass) =>{
 const countrySpoken = (countryArray, countryClass) =>{
     let countryString = `
     <ul class ="${countryClass}">
-    <h1>Countries Spoken:</h1>`;
+    <h2>Countries Spoken:</h2>`;
     for(let i=0; i < countryArray.length; i++){
         countryString+= `<li>${countryArray[i]}</li>`
     }
@@ -99,10 +99,13 @@ const htmlGenerator = (language) => {
     </div>
     <div class="row">
         <div class="input-container col">
+            <h2>Try it out!</h2>
+            <div class = "row">
             <form action="">
                 <input type="text" name="translate" id="input-translate">
             </form>
             <button class="translate-btn" id="translate-btn-${language.name}">Translate</button>
+            </div>
         </div>
         <div class="col">
             <div id="field-translate"><h2>Translation: </h2></div> 
@@ -161,3 +164,13 @@ document.querySelector("#language-container").addEventListener("click", function
     }
 
 })
+
+
+// What I added:
+// -Fully functional Translate Bar, able to translate the 6 needed phrases
+// -Styling for the Translate Bar and the accompanying translation field
+// -Arranged the content into three columns
+
+// What you should see:
+// -Each language has three columns of info, followed by a Translate Bar
+// -the Translate Bar is fully functional, with the translation appearing to the right of the bar
