@@ -9,6 +9,20 @@
     list-style-type: none;
 }
 
+.French-funfacts{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.French-countrySpoken{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
 .Mandarin-heading{
     margin: 20px;
 }
@@ -21,15 +35,62 @@
 }
 
 #field-translate{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
     margin-bottom: 40px;
-    margin-top: 4px;
+    padding: 1em;
+    height:22.5vh;
 }
 
 #input-translate{
     margin: 20px;
 }
 
+.input-container{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+
 .translate-btn{
     margin: 20px;
-    margin-bottom: 100px;
+}
+
+.Mandarin-funfacts{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Mandarin-countrySpoken{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Spanish-heading{
+    margin: 20px;
+}
+
+.Spanish-notable{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Spanish-funfacts{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.Spanish-countrySpoken{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 1em;
+    list-style-type: none;
 }

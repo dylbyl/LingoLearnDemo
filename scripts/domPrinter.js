@@ -98,7 +98,7 @@ const htmlGenerator = (language) => {
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="input-container col">
             <form action="">
                 <input type="text" name="translate" id="input-translate">
             </form>
