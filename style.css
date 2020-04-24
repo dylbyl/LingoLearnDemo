@@ -15,48 +15,11 @@ h4{
     color: #EB6C10;
 }
 
-.French-heading{
-    margin: 20px;
-}
-
-.French-notable{
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-    background-color: #EFD6AC;
-}
-
-.French-funfacts{
-    background-color: #EFD6AC;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.French-countrySpoken{
-    background-color: #EFD6AC;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Mandarin-heading{
-    margin: 20px;
-}
-
-.Mandarin-notable{
-    background-color: #EFD6AC;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
 #field-translate{
     background-color: #EFD6AC;
     border-radius: 8px;
     margin-bottom: 40px;
     padding: 1em;
-    height:17.5vh;
 }
 
 
@@ -76,89 +39,25 @@ h4{
     margin-left: 20px;
 }
 
-.Mandarin-funfacts{
-    background-color: #EFD6AC;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Mandarin-countrySpoken{
-    background-color: #EFD6AC;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Hindi-heading{
+.heading{
     margin: 20px;
 }
 
-.Hindi-notable{
-    border: 1px solid gainsboro;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Hindi-funfacts{
-    border: 1px solid gainsboro;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Hindi-countrySpoken{
-    border: 1px solid gainsboro;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Spanish-heading{
-    margin: 20px;
-}
-
-.Spanish-notable{
+.notable{
     background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
 }
 
-.Spanish-funfacts{
+.funfacts{
     background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
     list-style-type: none;
 }
 
-.Spanish-countrySpoken{
-    background-color: #EFD6AC;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Hindi-heading{
-    margin: 20px;
-}
-
-.Hindi-notable{
-    background-color: #EFD6AC;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Hindi-funfacts{
-    background-color: #EFD6AC;
-    border-radius: 8px;
-    padding: 1em;
-    list-style-type: none;
-}
-
-.Hindi-countrySpoken{
+.countrySpoken{
     background-color: #EFD6AC;
     border-radius: 8px;
     padding: 1em;
