@@ -36,15 +36,7 @@ const frenchData = {
     "Seychelles",
     "Switzerland",
     "Togo and Vanuatu"
-  ],
-  dictionary: {
-    hello: "Bonjour",
-    goodbye: "Au revior",
-    thankYou: "Merci",
-    goodEvening: "Bon soir",
-    howAreYou: "Ça va?",
-    whatsYourName: "Comment tu t’appelles?"
-  }
+  ]
 };
 
 // Calls a function to print the French HTML to the DOM (check domPrinter.js)

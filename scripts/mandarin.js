@@ -28,15 +28,7 @@ const mandarinData = {
       "China",
       "Singapore",
       "Taiwan"
-    ],
-    dictionary: {
-      hello: "你好",
-      goodbye: "再见",
-      thankYou: "谢谢",
-      goodEvening: "晚上好",
-      howAreYou: "你好吗",
-      whatsYourName: " 你叫什么名字"
-    }
+    ]
   }
 
   // document.querySelector("#language-container").innerHTML = h1(mandarinData.name, "mandarin-heading")

@@ -36,15 +36,7 @@ const spanishData = {
       "Spain",
       "Uruguay",
       "Venezuela"
-    ],
-    dictionary: {
-      hello: "Hola",
-      goodbye: "Adiós",
-      thankYou: "Gracias",
-      goodEvening: "Buena noches",
-      howAreYou: "¿cómo estás?",
-      whatsYourName: "cuál es tu nombre?"
-    }
+    ]
   };
 
   document.querySelector("#spanish").addEventListener("click", function(){
