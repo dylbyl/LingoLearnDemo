@@ -29,33 +29,7 @@
       "Mauritius",
       "Guyana",
       "Suriname"
-    ],
-    dictionary: {
-      hello: {
-        hindi: "नमस्ते",
-        englishPronunciation: "namaste"},
-      goodbye: {
-        hindi: "अलविदा",
-        englishPronunciation:"alavida"
-      },
-      thankYou: {
-        hindi: "धन्यवाद",
-        englishPronunciation: "dhanyavaad"
-
-      },
-      goodEvening: {
-        hindi: "सुसंध्या",
-        englishPronunciation: "susandhya"
-      },
-      howAreYou: {
-        hindi: "क्या हाल है",
-        englishPronunciation: "kya haal hai"
-      },
-      whatsYourName: {
-        hindi: "तुम्हारा नाम क्या हे",
-        englishPronunciation: "tumhaara naam kya he"
-    }
-    }
+    ]
   };
 
   document.querySelector("#hindi").addEventListener("click", function(){

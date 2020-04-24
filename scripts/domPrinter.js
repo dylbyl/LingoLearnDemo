@@ -87,22 +87,22 @@ const htmlGenerator = (language) => {
   //Clears the screen when a new language is selected
   container.innerHTML = "";
   //Calls the function to print the language name
-  container.innerHTML += h1(language.name, `${language.name}-heading`);
+  container.innerHTML += h1(language.name, `heading`);
   //Starts Rows and Columns via Bootstrap, then calls the functions for printing Notable People,
   //Fun Facts, and Countries Spoken. At the bottom, it keeps a form of what the user would like
   //to be translated.
   container.innerHTML += `
     <div class="row">
         <div class="col">
-            ${notable(language.notablePeople, `${language.name}-notable`)}
+            ${notable(language.notablePeople, `notable`)}
         </div>
         <div class="col">
-            ${funFacts(language.funFacts, `${language.name}-funfacts`)}
+            ${funFacts(language.funFacts, `funfacts`)}
         </div>
         <div class="col">
             ${countrySpoken(
               language.countriesSpoken,
-              `${language.name}-countrySpoken`
+              `countrySpoken`
             )}
         </div>
     </div>
@@ -137,100 +137,57 @@ document
       //splits the input at every space
       let translateSplit = lowerCasePhrase.split(" ");
 
-      //Leaves the first word alone, but capitalizes all other words in the string and removes their spaces
-      let translatePhrase = "";
-      for (let i = 0; i < translateSplit.length; i++) {
-        //taking all words after word 1 (index 0 of split array)
-        if (i >= 1) {
-          //the character at index 0 of the string is sent toUpperCase, then the rest of the word is added to it
-          translatePhrase +=
-            translateSplit[i].charAt(0).toUpperCase() +
-            translateSplit[i].slice(1);
-        }
-        //keeping index 0 the same
-        else {
-          translatePhrase += translateSplit[i];
-        }
-      }
+      
 
-      //Checks which language is currently being translated, using the translate button id tag
-      let language = {};
+      let translatedPhrase;
+
       if (event.target.id.split("-")[2] == "French") {
-        language = frenchData;
-      }
-      if (event.target.id.split("-")[2] == "Mandarin") {
-        language = mandarinData;
-      }
-      if (event.target.id.split("-")[2] == "Spanish") {
-        language = spanishData;
-      }
-      if (event.target.id.split("-")[2] == "Hindi") {
-        language = hindiData;
-      }
-
-      //Runs only if the language is not Hindi
-      if (language != hindiData) {
-        //If the input string is not a key in the lagnuage's .dictionary, an error message is printed
-        if (
-          translatePhrase == "" ||
-          language[`dictionary`][`${translatePhrase}`] === undefined
-        ) {
-          document.querySelector("#field-translate").innerHTML =
-            "<h2>Sorry! </h2>Please input a valid phrase!";
-          speechSynthesis.speak(new SpeechSynthesisUtterance("So sorry!"));
-        }
-        //If the input string matches with a key in the dictionary, the corresponding value is printed
-        else if (language[`dictionary`][`${translatePhrase}`] != undefined) {
-          if (language == mandarinData) {
-            document.querySelector("#field-translate").innerHTML =
-              "<h2>Translation: </h2>" +
-              language[`dictionary`][`${translatePhrase}`];
-            speechSynthesis.speak(
-              new SpeechSynthesisUtterance(
-                "I don't even know where to start with this"
-              )
-            );
-          } else {
-            document.querySelector("#field-translate").innerHTML =
-              "<h2>Translation: </h2>" +
-              language[`dictionary`][`${translatePhrase}`];
-            speechSynthesis.speak(
-              new SpeechSynthesisUtterance(
-                language[`dictionary`][`${translatePhrase}`]
-              )
-            );
+        translatedPhrase = apiFetch.getAll(originalPhrase, "fr", "fr-FR");
           }
-        }
-      }
-      //if the language is hindi, print the translation in Hindi but speak the English pronunciation
-      else {
-        if (
-          translatePhrase == "" ||
-          language[`dictionary`][`${translatePhrase}`] === undefined
-        ) {
-          document.querySelector("#field-translate").innerHTML =
-            "<h2>Sorry! </h2>Please input a valid phrase!";
-          speechSynthesis.speak(new SpeechSynthesisUtterance("So sorry!"));
-        } else {
-          console.log(language[`dictionary`][`${translatePhrase}`].hindi);
-          document.querySelector("#field-translate").innerHTML =
-            "<h2>Translation: </h2>" +
-            language[`dictionary`][`${translatePhrase}`].hindi;
-          speechSynthesis.speak(
-            new SpeechSynthesisUtterance(
-              language[`dictionary`][`${translatePhrase}`].englishPronunciation
-            )
-          );
-        }
-      }
+      if (event.target.id.split("-")[2] == "Mandarin") {
+        apiFetch.getAll(originalPhrase, "zh", "zh-CN");
+          }
+      if (event.target.id.split("-")[2] == "Spanish") {
+        apiFetch.getAll(originalPhrase, "es", "es-ES");
+          }
+      if (event.target.id.split("-")[2] == "Hindi") {
+        apiFetch.getAll(originalPhrase, "hi", "hi-IN");
+          }
+          if (event.target.id.split("-")[2] == "German") {
+            apiFetch.getAll(originalPhrase, "de", "de-DE");
+              }
+              if (event.target.id.split("-")[2] == "Japanese") {
+                apiFetch.getAll(originalPhrase, "ja", "ja-JP");
+                  }
+                  if (event.target.id.split("-")[2] == "Russian") {
+                    apiFetch.getAll(originalPhrase, "ru", "ru-RU");
+                      }
     }
   });
 
-// What I added:
-// -Fully functional Translate Bar, able to translate the 6 needed phrases
-// -Styling for the Translate Bar and the accompanying translation field
-// -Arranged the content into three columns
+  const apiFetch = {
+    getAll: (text, language, languageCode) => {
+      let returnedElement;
+        fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20200420T153316Z.67b81eb3be4a746e.9ef97414c4d9092d1fa3de6691239ca6795ce0cb&text=${text}&lang=en-${language}&format=html
+        `)
+        .then(r => r.json())
+        .then(pr => {
+          printText(pr.text, languageCode);
+        })
+        
+        
+    }
+  
+  }
 
-// What you should see:
-// -Each language has three columns of info, followed by a Translate Bar
-// -the Translate Bar is fully functional, with the translation appearing to the right of the bar
+
+  const printText = (words, wordsLanguage) => {
+    document.querySelector("#field-translate").innerHTML =
+          "<h2>Translation: </h2>" +
+          `${words}
+          <br>
+          <a target="blank" href="https://translate.yandex.com/">Powered by Yandex.Translate</a>`;
+          translationSpeech = new SpeechSynthesisUtterance(`${words}`);
+          translationSpeech.lang = wordsLanguage;
+          speechSynthesis.speak(translationSpeech)
+  }
